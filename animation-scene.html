@@ -8,7 +8,43 @@
         <a-scene>
             <!-- Set the sky -->
             <a-sky color="black"></a-sky>
-
+            <a-torus-knot
+            position="0 50 -50"
+            p="1" 
+            radius="50" 
+            radius-tubular="1"
+            animation="
+                property:rotation;
+                from: 0 0 0;
+                to: 0 0 360;
+                dur:1500;
+                loop: true;
+            "
+            animation__h="
+            property:q;
+            from:50;
+            to:60;
+            dur:6000;
+            dir:alternate;
+            loop:true;
+            "
+        ></a-torus-knot>
+        <a-sphere 
+            position="0 50 -50"
+            color="red"
+            radius="24"
+        ></a-sphere>
+        <a-sphere
+            position="0 50 -30"
+            color="white"
+            radius="7.5"
+        ></a-sphere>
+        <a-plane
+            position="0 0 0"
+            color="grey"
+            rotation="-90 0 0"
+            scale="100 90 1"
+        ></a-plane>
         </a-scene>
     </body>
 </html>
